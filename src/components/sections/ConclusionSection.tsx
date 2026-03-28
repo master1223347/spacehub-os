@@ -41,10 +41,10 @@ const ConclusionSection = () => {
           variants={stagger}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
-          className="space-y-8"
+          className="space-y-7"
         >
           <motion.p variants={fadeUp} className="text-sm tracking-[0.3em] uppercase text-space-violet font-medium">
-            The Future
+            Section 5 · Conclusion
           </motion.p>
 
           <motion.h2
@@ -57,22 +57,33 @@ const ConclusionSection = () => {
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Humans and AI — building the future, together.
+            Faster iteration, verified and safe AI, global collaboration over competition, and open access to engineering knowledge.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="pt-6">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-display font-semibold text-lg bg-primary text-primary-foreground hover:shadow-[var(--shadow-glow-lg)] transition-shadow duration-500"
-            >
-              View Demo
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-1">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
+          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <div className="glass-card rounded-xl p-5 text-left">
+              <h3 className="font-display font-semibold text-base mb-2">Philosophy</h3>
+              <p className="text-sm text-muted-foreground">
+                AI should empower, not replace. Engineers stay curious, creative, and in control.
+              </p>
+            </div>
+            <div className="glass-card rounded-xl p-5 text-left">
+              <h3 className="font-display font-semibold text-base mb-2">Open Source Edge</h3>
+              <p className="text-sm text-muted-foreground">
+                Open systems prevent duplicated work, enable public scrutiny, and improve mission-critical code over time, as proven by open orbital code used in real missions.
+              </p>
+            </div>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="pt-8">
+          <motion.p variants={fadeUp} className="text-base md:text-lg font-display max-w-3xl mx-auto">
+            We&apos;re not building AI tools. We&apos;re building the operating system that coordinates humans, AI, simulation, and real-world execution.
+          </motion.p>
+
+          <motion.p variants={fadeUp} className="text-2xl md:text-3xl font-display font-semibold max-w-3xl mx-auto leading-snug">
+            This isn&apos;t just a tool. It&apos;s the environment where the future of engineering is built.
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="pt-4">
             <p className="text-xs text-muted-foreground tracking-widest uppercase">
               SpaceHub OS · 2026
             </p>

@@ -15,12 +15,39 @@ const ApplicationsSection = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
   };
 
-  const apps = [
-    { icon: "🌐", title: "MMO Collaboration", desc: "Thousands of engineers in one shared space" },
-    { icon: "🏭", title: "Industry Partners", desc: "Integrate with Boeing, SpaceX, and beyond" },
-    { icon: "🎓", title: "Education", desc: "Train the next generation of space engineers" },
-    { icon: "🤖", title: "AR & Robotics", desc: "Bridge digital design to physical reality" },
-    { icon: "🌍", title: "Global Coordination", desc: "Real-time sync across continents and orbits" },
+  const pillars = [
+    {
+      title: "1. MMO Engineering Environment",
+      points: [
+        "A shared world for all engineers.",
+        "Real-time collaboration and simulation.",
+        "Continuous design -> test -> iterate loop.",
+      ],
+    },
+    {
+      title: "2. Global Coordination + Industry",
+      points: [
+        "Works across NASA, SpaceX, Blue Origin, Boeing, and more.",
+        "Extends to JAXA, ESA, CNSA, and ISRO.",
+        "One shared system reduces conflict and duplication.",
+      ],
+    },
+    {
+      title: "3. AR + Physical AI",
+      points: [
+        "AR glasses overlay designs on real systems.",
+        "Step-by-step 3D instructions with live simulation feedback.",
+        "Teleoperated humanoids trained through VR/AR.",
+      ],
+    },
+    {
+      title: "4. Education + Workforce",
+      points: [
+        "Open MMO access for students, schools, and universities.",
+        "Explore real NASA systems and replay launches.",
+        "Fix onboarding gaps and prevent knowledge loss.",
+      ],
+    },
   ];
 
   return (
@@ -51,27 +78,30 @@ const ApplicationsSection = () => {
         >
           <div className="text-center space-y-4">
             <motion.p variants={fadeUp} className="text-sm tracking-[0.3em] uppercase text-space-glow font-medium">
-              Real-World Applications
+              Section 4 · Real World Applications
             </motion.p>
             <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-display font-bold">
-              One platform for
+              One system coordinating
               <br />
-              <span className="text-space-glow text-glow">all engineering</span>
+              <span className="text-space-glow text-glow">humans, AI, simulation, and reality</span>
             </motion.h2>
           </div>
 
-          <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto pt-4">
-            {apps.map((app, i) => (
+          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto pt-4">
+            {pillars.map((pillar) => (
               <motion.div
-                key={app.title}
+                key={pillar.title}
                 variants={fadeUp}
-                className={`glass-card rounded-xl p-6 hover:border-space-glow/30 transition-all duration-300 group ${
-                  i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
-                }`}
+                className="glass-card rounded-xl p-6 hover:border-space-glow/30 transition-all duration-300 group"
               >
-                <div className="text-2xl mb-3">{app.icon}</div>
-                <h3 className="font-display font-semibold text-base mb-1">{app.title}</h3>
-                <p className="text-sm text-muted-foreground">{app.desc}</p>
+                <h3 className="font-display font-semibold text-base mb-3">{pillar.title}</h3>
+                <div className="space-y-2">
+                  {pillar.points.map((point) => (
+                    <p key={point} className="text-sm text-muted-foreground">
+                      {point}
+                    </p>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </motion.div>

@@ -16,10 +16,10 @@ const SimulationSection = () => {
   };
 
   const stats = [
-    { value: "10K+", label: "Simulations / hour" },
-    { value: "99.7%", label: "Accuracy rate" },
-    { value: "<2s", label: "Prediction time" },
-    { value: "∞", label: "Human oversight" },
+    { value: "1K+", label: "Parallel simulations" },
+    { value: "Gaussian", label: "Large-system modeling" },
+    { value: "Multi-path", label: "Trajectory planning" },
+    { value: "Human-led", label: "Control at every step" },
   ];
 
   return (
@@ -62,7 +62,7 @@ const SimulationSection = () => {
           className="space-y-10"
         >
           <motion.p variants={fadeUp} className="text-sm tracking-[0.3em] uppercase text-space-cyan font-medium">
-            Physics Simulation Agent
+            Section 3 · AI Physics Simulation Agent
           </motion.p>
 
           <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-display font-bold">
@@ -74,8 +74,7 @@ const SimulationSection = () => {
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            AI‑assisted physics with trajectory prediction and full human verification. 
-            Safety is not optional — it's the architecture.
+            You don&apos;t test once. You test thousands of times instantly.
           </motion.p>
 
           <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 max-w-3xl mx-auto">
@@ -86,6 +85,38 @@ const SimulationSection = () => {
               </div>
             ))}
           </motion.div>
+
+          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              "Orbital trajectory simulation at scale.",
+              "System behavior modeling across mission states.",
+              "Failure prediction before physical deployment.",
+            ].map((point) => (
+              <div key={point} className="glass-card rounded-xl p-4">
+                <p className="text-sm text-muted-foreground">{point}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              "AI is specialized by domain.",
+              "AI is sandboxed and never fully autonomous.",
+              "Humans remain in control through every decision.",
+            ].map((point) => (
+              <div key={point} className="glass-card rounded-xl p-4">
+                <p className="text-sm text-muted-foreground">{point}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.p variants={fadeUp} className="text-base md:text-lg text-muted-foreground">
+            Millions of simulations run before real deployment.
+          </motion.p>
+
+          <motion.p variants={fadeUp} className="text-xl md:text-2xl font-display font-semibold">
+            We don&apos;t trust AI blindly. We verify it at scale.
+          </motion.p>
         </motion.div>
       </div>
     </SpaceSection>

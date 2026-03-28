@@ -16,9 +16,10 @@ const FusionSection = () => {
   };
 
   const features = [
-    { title: "Fusion 360 Integration", desc: "Native CAD connection with real-time sync" },
-    { title: "Live Design Updates", desc: "See changes propagate instantly across teams" },
-    { title: "Collaborative Editing", desc: "Multiple engineers, one unified model" },
+    { title: "Embedded CAD Agents", desc: "AI runs inside Fusion and SolidWorks, directly in the design flow." },
+    { title: "Iteration, Not Replacement", desc: "Engineers modify designs faster while staying fully in control." },
+    { title: "Live Multiplayer Models", desc: "CAD streams into a shared world with updates every second." },
+    { title: "Mass Collaboration", desc: "100+ engineers can view, edit, and communicate in real time." },
   ];
 
   return (
@@ -47,16 +48,18 @@ const FusionSection = () => {
           {/* Left: text */}
           <div className="space-y-6">
             <motion.p variants={fadeUp} className="text-sm tracking-[0.3em] uppercase text-space-violet font-medium">
-              Fusion / CAD Agent
+              Section 2 · Fusion / CAD Agent
             </motion.p>
             <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-display font-bold">
-              AI‑powered
+              Design becomes
               <br />
-              <span className="text-space-glow text-glow">design</span>
+              <span className="text-space-glow text-glow">real-time and collaborative</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-md">
-              CAD becomes <span className="text-foreground font-semibold">multiplayer</span>. 
-              Design in real time with AI that understands engineering constraints.
+              You turned CAD from a static tool into a live system.
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-xl md:text-2xl font-display font-semibold max-w-lg">
+              CAD is no longer a file. It&apos;s a shared, living system.
             </motion.p>
           </div>
 

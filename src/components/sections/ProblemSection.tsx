@@ -33,10 +33,10 @@ const ProblemSection = () => {
           variants={stagger}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
-          className="space-y-8"
+          className="space-y-7"
         >
           <motion.p variants={fadeUp} className="text-sm md:text-base tracking-[0.3em] uppercase text-space-glow font-medium">
-            The Problem
+            Section 1 · Problem + Solution
           </motion.p>
 
           <motion.h1
@@ -45,23 +45,34 @@ const ProblemSection = () => {
           >
             Engineering is
             <br />
-            too slow
+            too slow.
           </motion.h1>
 
           <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4 md:gap-6 pt-4">
-            {["Slow iteration cycles", "Fragmented workflows", "Unsafe AI reliance"].map((point) => (
+            {[
+              "Launch cycles went from months to years",
+              "Knowledge is fragmented across teams and documents",
+              "AI over-automates or under-delivers",
+            ].map((point) => (
               <div key={point} className="glass-card px-5 py-3 rounded-lg">
                 <span className="text-sm md:text-base text-muted-foreground">{point}</span>
               </div>
             ))}
           </motion.div>
 
+          <motion.p variants={fadeUp} className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Skills atrophy when engineers over-delegate to AI instead of learning.
+          </motion.p>
+
           <motion.div variants={fadeUp} className="pt-8">
             <div className="inline-block">
               <div className="h-px w-16 bg-space-glow/30 mx-auto mb-6" />
-              <p className="text-xl md:text-2xl font-display font-semibold">
+              <p className="text-2xl md:text-3xl font-display font-semibold">
                 We built{" "}
-                <span className="text-space-glow text-glow">SpaceHub OS</span>
+                <span className="text-space-glow text-glow">SpaceHub OS.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-3 max-w-2xl">
+                A real-time, AI-assisted engineering environment where humans stay in control and AI accelerates everything.
               </p>
             </div>
           </motion.div>
