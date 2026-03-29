@@ -88,3 +88,20 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+.deck-scroll {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.deck-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  .deck-scroll {
+    scroll-behavior: auto;
+  }
+}

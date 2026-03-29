@@ -37,6 +37,7 @@ export function ProofSection() {
           src="/images/image5.png"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover opacity-[0.05]"
           aria-hidden="true"
         />
@@ -110,6 +111,7 @@ export function ProofSection() {
                 src="/images/image5.png"
                 alt="Lunar surface with Earth visible in the background"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cosmos/80 via-transparent to-cosmos/20" />
@@ -135,6 +137,7 @@ export function ProofSection() {
                       src="/images/image4.png"
                       alt={proof.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 360px"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-nebula/60 to-transparent" />

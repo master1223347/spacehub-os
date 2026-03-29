@@ -62,3 +62,258 @@ export const COMPETITORS = [
   { name: 'NVIDIA Omniverse', price: '$9K+/yr', arch: 'RTX-locked', collab: 'Viz only' },
   { name: 'SpaceHub', price: 'Open Source', arch: 'Rust/Bevy Native', collab: 'MMO Real-time', highlight: true },
 ];
+
+export type SlideId =
+  | 'hero-intro'
+  | 'problem-solution'
+  | 'fusion-cad'
+  | 'physment-sim'
+  | 'applications'
+  | 'conclusion';
+
+export interface DeckSlide {
+  id: SlideId;
+  eyebrow: string;
+  headline: string;
+  subheadline?: string;
+  points: string[];
+  keyLine?: string;
+  transitionLine?: string;
+  footerNote?: string;
+}
+
+export interface ApplicationPillar {
+  id: 'mmo' | 'coordination' | 'ar-ai' | 'education';
+  title: string;
+  summary: string;
+  bullets: string[];
+  impactLine: string;
+}
+
+export interface DeckStat {
+  value: string;
+  label: string;
+  note: string;
+}
+
+export interface WorkflowStep {
+  title: string;
+  detail: string;
+}
+
+export const PITCH_DECK_SLIDES: DeckSlide[] = [
+  {
+    id: 'hero-intro',
+    eyebrow: 'Intro',
+    headline: 'SpaceHub OS',
+    subheadline: 'Docker For Engineering',
+    points: [],
+  },
+  {
+    id: 'problem-solution',
+    eyebrow: 'Section 1 — Problem + Solution',
+    headline: 'Engineering is too slow.',
+    points: [
+      'Launch cycles went from months to years.',
+      'Knowledge is fragmented across teams and documents.',
+      'AI today either over-automates (dangerous) or under-delivers (just chatbots).',
+      'Skills are at risk of atrophy when engineers delegate instead of learning.',
+    ],
+    transitionLine: 'We built SpaceHub OS.',
+    footerNote:
+      'A real-time, AI-assisted engineering environment where humans stay in control and AI accelerates everything.',
+  },
+  {
+    id: 'fusion-cad',
+    eyebrow: 'Section 2 — Fusion / CAD Agent',
+    headline: 'Design becomes real-time and collaborative',
+    subheadline: 'You turned CAD from a static tool into a live system.',
+    points: [
+      'AI agents are embedded directly inside CAD tools (Fusion, SolidWorks).',
+      'Engineers modify designs faster and use AI for iteration, not replacement.',
+      'CAD models stream into a shared multiplayer world with live updates every second.',
+      '100+ engineers can view, edit, and communicate in the same environment.',
+    ],
+    keyLine: 'CAD is no longer a file. It is a shared, living system.',
+  },
+  {
+    id: 'physment-sim',
+    eyebrow: 'Section 3 — AI Physics Simulation Agent',
+    headline: 'Simulate before you build',
+    subheadline: 'You do not test once. You test thousands of times instantly.',
+    points: [
+      'Physment is our AI-assisted physics engine for high-speed, high-fidelity simulation.',
+      'Run hundreds to thousands of simulations simultaneously for trajectories, system behavior, and failure prediction.',
+      'Use Gaussian-based modeling and AI trajectory planning across many possible outcomes.',
+      'AI remains specialized, sandboxed, and never fully autonomous. Humans always stay in control.',
+      'Millions of simulations are verified before real deployment.',
+    ],
+    keyLine: 'We do not trust AI blindly. We verify it at scale.',
+  },
+  {
+    id: 'applications',
+    eyebrow: 'Section 4 — Real World Applications',
+    headline: 'One system, many realities',
+    points: [
+      'MMO engineering environment',
+      'Global coordination across agencies and industry',
+      'AR + physical AI workflows',
+      'Education + workforce acceleration',
+    ],
+    keyLine: 'One shared system reduces conflict and duplication.',
+  },
+  {
+    id: 'conclusion',
+    eyebrow: 'Section 5 — Conclusion',
+    headline: 'The operating system for space engineering',
+    points: [
+      'Faster iteration cycles.',
+      'Verified and safe AI.',
+      'Global collaboration instead of competition.',
+      'Open access to engineering knowledge.',
+    ],
+    keyLine:
+      'Open source prevents duplicated work, enables public scrutiny, and is already proven on real missions through open-source orbital code.',
+    footerNote:
+      'AI should empower, not replace. Engineers stay curious, creative, and in control.',
+  },
+];
+
+export const APPLICATION_PILLARS: ApplicationPillar[] = [
+  {
+    id: 'mmo',
+    title: 'MMO Engineering Environment',
+    summary: 'A shared world where engineers design, test, and iterate continuously in real time.',
+    bullets: [
+      'Real-time collaboration and simulation loops.',
+      'Continuous design to test to iterate cycle.',
+      'Shared operational context for every discipline.',
+    ],
+    impactLine: 'Engineering becomes persistent, not session-based.',
+  },
+  {
+    id: 'coordination',
+    title: 'Global Coordination + Industry',
+    summary: 'A common engineering substrate across agencies and commercial organizations.',
+    bullets: [
+      'Works across NASA, SpaceX, Blue Origin, Boeing, and more.',
+      'Extensible to JAXA, ESA, CNSA, and ISRO workflows.',
+      'Shared models reduce duplicated effort and cross-team conflict.',
+    ],
+    impactLine: 'Coordination becomes a product feature, not an afterthought.',
+  },
+  {
+    id: 'ar-ai',
+    title: 'AR + Physical AI',
+    summary: 'Bridge digital engineering and real operations with immersive guidance and robotics.',
+    bullets: [
+      'AR glasses overlay designs on physical systems.',
+      'Workers receive step-by-step 3D instructions and simulation feedback.',
+      'Teleoperated humanoids and VR/AR-assisted training close execution gaps.',
+    ],
+    impactLine: 'Simulation and reality stay in sync at the point of work.',
+  },
+  {
+    id: 'education',
+    title: 'Education + Workforce',
+    summary: 'Open MMO access to train the next generation and preserve institutional knowledge.',
+    bullets: [
+      'Students, schools, and universities can explore real engineering systems.',
+      'Replay launches and learn through interactive mission scenarios.',
+      'Fix onboarding gaps and prevent knowledge loss at scale.',
+    ],
+    impactLine: 'Engineering expertise becomes teachable, durable, and accessible.',
+  },
+];
+
+export const PITCH_RESEARCH_STATS: DeckStat[] = [
+  {
+    value: '20%',
+    label: 'NASA Workforce Loss (2025)',
+    note: 'Roughly one in five employees departed in a single year.',
+  },
+  {
+    value: '$150B+',
+    label: 'Digital Twin Upside',
+    note: 'Projected market scale by 2030 across sectors.',
+  },
+  {
+    value: '30–48%',
+    label: 'Market Growth CAGR',
+    note: 'Aerospace digital engineering demand is compounding quickly.',
+  },
+  {
+    value: '100s',
+    label: 'Concurrent Engineers',
+    note: 'Targeted shared multiplayer design and simulation sessions.',
+  },
+];
+
+export const CAD_WORKFLOW_STEPS: WorkflowStep[] = [
+  {
+    title: 'Design in CAD',
+    detail: 'Fusion 360, SolidWorks, and NASA-standard CAD tools remain first-class.',
+  },
+  {
+    title: 'Live Stream to Bevy',
+    detail: 'MCP import connectors update every second, keeping MMO geometry synchronized.',
+  },
+  {
+    title: 'Multiplayer Review',
+    detail: 'Teams view, annotate, discuss, and modify designs together in one world.',
+  },
+  {
+    title: 'Simulate in Physment',
+    detail: 'Run scenario sweeps, stress cases, and parameter variations at scale.',
+  },
+  {
+    title: 'Interpret Outcomes',
+    detail: 'Engineers inspect failures and tradeoffs before hardware commitment.',
+  },
+  {
+    title: 'Sync Updates to CAD',
+    detail: 'Changes propagate through SpaceHub MCPs so teams iterate with shared context.',
+  },
+];
+
+export const MICROMODEL_GUARDRAILS = [
+  'Use specialized micro-models for bounded tasks instead of one all-powerful model.',
+  'Require AI to ask clarifying questions when context is missing or ambiguous.',
+  'Disallow broad autopilot control of robotics, vehicles, and mission-critical systems.',
+  'Keep models sandboxed with strict permissions and explicit human approval gates.',
+  'Verify candidate decisions in high-volume simulation before any real-world execution.',
+];
+
+export const IMMERSION_USE_CASES = [
+  'Tier 1: Voice assistant for field updates, status checks, and quick agent queries.',
+  'Tier 2: Browser/mobile/desktop access for broad participation and lightweight review.',
+  'Tier 3: Stereoscopic 3D displays for deeper in-screen spatial understanding.',
+  'Tier 4: AR glasses for construction, verification, and physical-digital overlays.',
+  'Tier 5: Full VR immersion for training, walkthroughs, and complex mission rehearsal.',
+];
+
+export const EDTECH_EXPANSION_POINTS = [
+  'Open MMO access for students, schools, universities, and industry partners.',
+  'Agent-guided onboarding so every learner gets context-aware exploration.',
+  'Interactive replay of launches, mission timelines, and design decisions.',
+  'Gamified learning inspired by factory/sandbox systems with real engineering data.',
+  'Public-facing experiences to strengthen workforce pipelines and reduce knowledge loss.',
+];
+
+export const RUST_SIGNAL_EXAMPLES = [
+  'Cloudflare (edge and systems performance)',
+  'AWS (service-level components and tooling)',
+  'Microsoft (security-focused systems investments)',
+  'Google (memory-safe systems initiatives)',
+  'Discord (core infrastructure migration for reliability)',
+];
+
+export const FOUNDATION_CLAIMS = [
+  'NASA digital transformation spend is large but fragmented across many stacks.',
+  'Digital twin and simulation markets are accelerating with strong tailwinds.',
+  'Legacy incumbents are expensive, siloed, and weak at real-time multiplayer engineering.',
+  'Policy momentum favors memory-safe software and shared public code.',
+  'Open-source flight software has already proven viable in mission contexts.',
+  'AR/VR delivers measurable training and operational gains in aerospace workflows.',
+  'Institutional knowledge loss is now a strategic risk, not an HR footnote.',
+];

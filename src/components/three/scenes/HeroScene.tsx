@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '../objects/Stars';
 import { Earth } from '../objects/Earth';
+import { OrbitingNodes } from '../objects/OrbitingNodes';
 import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing';
 
 function Scene() {
@@ -16,6 +17,7 @@ function Scene() {
 
       {/* Objects */}
       <Earth />
+      <OrbitingNodes />
       <Stars count={6000} />
 
       {/* Post-processing */}

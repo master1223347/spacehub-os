@@ -50,6 +50,7 @@ export function CTASection() {
                   src="/images/image2.png"
                   alt="The SpaceHub Team"
                   fill
+                  sizes="(max-width: 768px) 100vw, 768px"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cosmos/80 via-transparent to-cosmos/20" />
